@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Trying to Study</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f0f0f5;
+      transition: background-color 0.5s;
+    }
+    h1 {
+      color: #333;
+    }
+    .button {
+      padding: 10px 20px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+      font-size: 1.1em;
+    }
+    .button:active {
+      background-color: #45a049;
+    }
+    /* Alert message styling */
+    .alert {
+      display: none; /* Hidden by default */
+      position: fixed;
+      top: -60px; /* Start above the viewport */
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #4caf50;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 5px;
+      transition: top 0.5s ease; /* Smooth transition */
+      z-index: 1000;
+      font-weight: bold;
+    }
+    /* Achievement board styling */
+    #achievements {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+      width: 80%;
+      max-width: 400px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Initial Homepage -->
+<div id="studyPage">
+    <body style="background-image: url('bg.jpg'); background-size: cover; background-position: center; height: 100vh; margin: 0;"></body>
+
+  <h1>Trying to Study...</h1>
+  <p>You should focus on your studies! But hey, the "Home Page" button is just sitting there...</p>
+  <button class="button" onclick="goToHomePage()">Go to Home Page</button>
+</div>
+
+<!-- Hidden Achievement Board -->
+<div id="achievements">
+  <h1>Achievement Board</h1>
+</div>
+
+<!-- Alert for achievements -->
+<div class="alert" id="alertMessage"></div>
+
+<button class="button" onclick="unlockAchievement()" style="display: none;" id="achievementButton">Click Me!</button>
+
+<script>
+  // Function to switch to the achievement board "home page"
+  function goToHomePage() {
+    document.getElementById("studyPage").style.display = "none";
+    document.getElementById("achievements").style.display = "flex";
+    document.body.style.backgroundColor = "#f4f4f9";
+
+    // Display achievement for opening the website
+    showAlert("🎉 Achievement Unlocked: Opened the Website");
+
+    // Show the click button for achievements
+    document.getElementById("achievementButton").style.display = "inline-block";
+  }
+
+  // Unlock "Scrolled the Page" achievement when scrolling
+  let hasScrolled = false;
+  window.onscroll = function() {
+    if (document.getElementById("achievements").style.display === "flex" && !hasScrolled) {
+      showAlert("🎉 Achievement Unlocked: Scrolled the Page");
+      hasScrolled = true;
+    }
+  };
+
+  // Show alert message
+  function showAlert(message) {
+    const alert = document.getElementById("alertMessage");
+    alert.innerText = message;
+    alert.style.display = "block";
+    alert.style.top = "20px"; // Slide down into view
+
+    // Hide the alert after a short duration
+    setTimeout(() => {
+      alert.style.top = "-60px"; // Slide back up
+    }, 3000); // Change duration as needed
+  }
+
+  // Trigger achievement pop-up for button click
+  function unlockAchievement() {
+    showAlert("🎉 Achievement Unlocked: Clicked the Button");
+  }
+</script>
+
+</body>
+</html>
