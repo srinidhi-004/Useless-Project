@@ -2,7 +2,6 @@
 
 # Achievement Board 🎯
 
-
 ## Basic Details
 ### Team Name: SyntaX
 
@@ -28,51 +27,13 @@ For Software:
 - CSS
 - JAVASCRIPT
 
-# Screenshots 
-
-*Add caption explaining what this shows*
-
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
-
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
-
-# Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
-
-For Hardware:
-
-# Schematic & Circuit
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
-
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
-
-# Build Photos
-![Components](Add photo of your components here)
-*List out all components shown*
-
-![Build](Add photos of build process here)
-*Explain the build steps*
-
-![Final](Add photo of final product here)
-*Explain the final build*
-
 ### Project Demo
 # Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
+https://github.com/user-attachments/assets/56b5a905-0292-4a92-93e0-f05d11c938be
 
-# Additional Demos
-[Add any extra demo materials/links]
+The website is first asking you to try to study and when you click the home page it shows achievement unlocked :Opened the website.
+Similarly when you click the button it shows achievement unlocked:You clicked the button! 
 
-## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
 
 ---
 Made with ❤️ at TinkerHub Useless Projects 
