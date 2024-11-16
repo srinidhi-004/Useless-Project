@@ -102,14 +102,14 @@
     }
   };
 
-  // Show alert message
+//Show alert
   function showAlert(message) {
     const alert = document.getElementById("alertMessage");
     alert.innerText = message;
     alert.style.display = "block";
     alert.style.top = "20px"; // Slide down into view
 
-    // Hide the alert after a short duration
+    // Hide the alert 
     setTimeout(() => {
       alert.style.top = "-60px"; // Slide back up
     }, 3000); // Change duration as needed
